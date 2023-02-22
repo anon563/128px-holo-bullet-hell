@@ -43,6 +43,7 @@ class Stage {
         if (this.isIntro) {
             const keys = game.input.getKeys();
             if (this.isIntro < this.introFrame || Object.keys(keys).some(key => keys[key])) {
+                if (game.audio.ctx.state === 'suspended') game.audio.ctx.resume();
                 this.isIntro--;
                 if (!this.isIntro) {
                     this.titleFrame = 180;

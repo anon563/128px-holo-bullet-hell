@@ -15,7 +15,7 @@ class AudioManager {
     constructor(assets) {
         this.bgmList = assets.bgmList;
         this.seList = assets.seList;
-        // this.ctx.suspend();
+        this.ctx.suspend();
     }
 
     pause = () => {
